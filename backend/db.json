@@ -1,0 +1,18 @@
+{
+    "clients": [
+        {
+            "id": 1,
+            "name": "João da Silva",
+            "specialist": "Dentista",
+            "date": "",
+            "hour": ""
+        },
+        {
+            "id": 1,
+            "name": "Maria Joana",
+            "specialist": "Clínico-geral",
+            "date": "",
+            "hour": ""
+        }
+    ]
+}
