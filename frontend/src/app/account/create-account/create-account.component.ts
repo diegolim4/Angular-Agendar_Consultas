@@ -11,6 +11,7 @@ export class CreateAccountComponent implements OnInit {
     name: '',
     email: '',
     password: '',
+    cpassword: '',
   };
 
   constructor() { }
