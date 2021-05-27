@@ -1,7 +1,10 @@
  const mongoose = require('mongoose');
 
  mongoose.connect('mongodb://localhost/consultas', {
-     useMongoClient: true
+    useMongoClient: true,
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
  });
 
  mongoose.Promise = global.Promise;
