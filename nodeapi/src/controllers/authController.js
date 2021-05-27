@@ -14,6 +14,8 @@ router.post('/register', async (req, res) => {
             return res.send(400).send({error: 'Usuário já existe'}) 
 
         const user = await User.create(req.body);
+
+        user.password = undefined;
         
         return res.send({user});
     
