@@ -5,7 +5,14 @@ const User = require('../models/user')
 const router = express.Router();
 
 router.post('/register', async (req, res) => {
+    
+    const { email } = req.body;
+
     try {
+        //verificar se o usuário já existe pelo email
+        if(await User.findOne ({ email }))
+            return res.send(400).send({error: 'Usuário já existe'}) 
+
         const user = await User.create(req.body);
         
         return res.send({user});
