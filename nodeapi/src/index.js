@@ -10,6 +10,7 @@ app.use(bodyParser.urlencoded({
 
 
 require('./controllers/authController')(app);   
+require('./controllers/projectController')(app);   
 
 app.listen(5001, () => {
     console.log('Servido rodando...')
