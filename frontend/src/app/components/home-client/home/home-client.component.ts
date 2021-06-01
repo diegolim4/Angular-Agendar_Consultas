@@ -14,7 +14,7 @@ export class HomeClientComponent implements OnInit {
   }
 
   getNewScheduling(): void {
-    this.router.navigate([''])
+    this.router.navigate(['/new'])
   }
 
 }

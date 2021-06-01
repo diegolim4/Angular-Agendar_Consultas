@@ -5,6 +5,7 @@ import { LoginComponent } from './account/login/login.component';
 import { AuthGuard } from './account/shared/auth.guard';
 import { HomeComponent } from './components/template/home/home.component';
 import { HomeClientComponent } from './components/home-client/home/home-client.component';
+import { CreateScheduleComponent } from './components/create-schedule/create-schedule.component';
 
 
 const routes: Routes = [{
@@ -26,6 +27,10 @@ const routes: Routes = [{
 {
   path: 'home-client',
   component: HomeClientComponent,
+},
+{
+  path: 'new',
+  component:  CreateScheduleComponent,
 },
 
 ];
