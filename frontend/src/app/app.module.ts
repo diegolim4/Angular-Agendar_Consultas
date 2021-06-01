@@ -18,6 +18,7 @@ import { HomeComponent } from './components/template/home/home.component';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HomeClientComponent } from './components/home-client/home/home-client.component';
 import { CreateScheduleComponent } from './components/create-schedule/create-schedule.component';
 
@@ -44,7 +45,8 @@ import { CreateScheduleComponent } from './components/create-schedule/create-sch
     MatIconModule,
     MatCardModule,
     MatButtonModule,
-    HttpClientModule   
+    HttpClientModule,
+    MatSnackBarModule   
   ],
   providers: [],
   bootstrap: [AppComponent]
