@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NewScheduleService } from '../home-client/schedule.service';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-create-schedule',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateScheduleComponent implements OnInit {
 
-  constructor() { }
+  constructor(private scheduleService: NewScheduleService,
+    private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  createSchedule(): void {
+    this.scheduleService.showMsg('Consulta marcada')
+  }
+
+  cancelSchedule(): void {
+    this.router.navigate(['/home-client'])
   }
 
 }
