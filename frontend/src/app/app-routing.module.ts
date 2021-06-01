@@ -4,27 +4,33 @@ import { CreateAccountComponent } from './account/create-account/create-account.
 import { LoginComponent } from './account/login/login.component';
 import { AuthGuard } from './account/shared/auth.guard';
 import { HomeComponent } from './components/template/home/home.component';
+import { HomeClientComponent } from './views/home-client/home-client.component';
 
 const routes: Routes = [{
   path: '',
   component: HomeComponent,
-  canActivate: [AuthGuard] 
+  canActivate: [AuthGuard]
 },
-  
+
 {
-  path:'',
+  path: '',
   component: LoginComponent,
 },
 
 {
-  path:'create-account',
+  path: 'create-account',
   component: CreateAccountComponent,
-}
+},
+
+{
+  path: 'home-client',
+  component: HomeClientComponent,
+},
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],  
-exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }
