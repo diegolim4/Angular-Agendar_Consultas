@@ -19,6 +19,7 @@ import { HomeComponent } from './components/template/home/home.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { HomeClientComponent } from './components/home-client/home/home-client.component';
+import { CreateScheduleComponent } from './components/create-schedule/create-schedule.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { HomeClientComponent } from './components/home-client/home/home-client.c
     CreateAccountComponent,    
     AuthComponent,
     HomeComponent,
-    HomeClientComponent 
+    HomeClientComponent,
+    CreateScheduleComponent 
     
   ],
   imports: [
