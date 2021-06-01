@@ -4,7 +4,8 @@ import { CreateAccountComponent } from './account/create-account/create-account.
 import { LoginComponent } from './account/login/login.component';
 import { AuthGuard } from './account/shared/auth.guard';
 import { HomeComponent } from './components/template/home/home.component';
-import { HomeClientComponent } from './views/home-client/home-client.component';
+import { HomeClientComponent } from './components/home-client/home-client.component';
+
 
 const routes: Routes = [{
   path: '',

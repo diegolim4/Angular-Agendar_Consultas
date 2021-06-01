@@ -18,7 +18,8 @@ import { HomeComponent } from './components/template/home/home.component';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
-import { HomeClientComponent } from './views/home-client/home-client.component';
+import { HomeClientComponent } from './components/home-client/home-client.component';
+
 
 
 @NgModule({
