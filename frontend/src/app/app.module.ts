@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
@@ -40,6 +42,8 @@ import { CreateScheduleComponent } from './components/create-schedule/create-sch
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    MatFormFieldModule,
+    MatInputModule, 
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
