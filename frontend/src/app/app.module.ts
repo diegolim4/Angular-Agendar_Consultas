@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatSelectModule } from '@angular/material/select';
 import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
@@ -23,6 +25,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HomeClientComponent } from './components/home-client/home/home-client.component';
 import { CreateScheduleComponent } from './components/create-schedule/create-schedule.component';
+import { MatNativeDateModule } from '@angular/material/core';
 
 
 @NgModule({
@@ -43,7 +46,10 @@ import { CreateScheduleComponent } from './components/create-schedule/create-sch
     AppRoutingModule,
     FormsModule,
     MatFormFieldModule,
-    MatInputModule, 
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatSelectModule, 
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
