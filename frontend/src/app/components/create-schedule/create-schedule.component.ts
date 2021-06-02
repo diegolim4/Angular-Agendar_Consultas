@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NewScheduleService } from '../home-client/schedule.service';
 import { Router } from '@angular/router'
+import { Client } from '../home-client/schedule.model';
 
 @Component({
   selector: 'app-create-schedule',
@@ -9,6 +10,13 @@ import { Router } from '@angular/router'
 })
 export class CreateScheduleComponent implements OnInit {
 
+  schedule: Client = {
+    name: '',
+    specialist:'',
+    date: NaN,
+    hour: NaN    
+  }
+
   constructor(private scheduleService: NewScheduleService,
     private router: Router) { }
 
@@ -16,7 +24,11 @@ export class CreateScheduleComponent implements OnInit {
   }
 
   createSchedule(): void {
-    this.scheduleService.showMsg('Consulta marcada')
+
+    this.scheduleService.create(this.schedule).subscribe(()=>{
+      this.scheduleService.showMsg('Consulta marcada')
+      this.router.navigate(['/home-client'])
+    })    
   }
 
   cancelSchedule(): void {
