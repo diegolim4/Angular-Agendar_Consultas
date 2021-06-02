@@ -1,12 +1,46 @@
 <app-header></app-header>
 <app-footer></app-footer>
-<p>create-schedule works!</p>
 
-<button  mat-raised-button (click)="createSchedule()" color="primary">
-    Salvar
-</button>
+<mat-card>
+    <mat-card-title>Nova Consulta</mat-card-title>
+    <br>
+    <form>
+        <mat-form-field appearance="fill">
+            <mat-label>Nome Completo</mat-label>
+            <input matInput >        
+        </mat-form-field>
+        
+        <mat-form-field appearance="fill">
+        <mat-label>Selecione o médico</mat-label>
+            <mat-select>            
+                <mat-option value="one">Clínico Geral</mat-option>
+                <mat-option value="two">Oftalmologia</mat-option>
+                <mat-option value="tree">Cardiologista</mat-option>
+                <mat-option value="four">Dermatologia</mat-option>
+                <mat-option value="six">Ortopedia</mat-option>
+                <mat-option value="seven">Infectologia</mat-option>
+            </mat-select>
+        </mat-form-field>    
+             
+        <mat-form-field appearance="fill">
+            <label>Escolha uma data</label>            
+            <mat-datepicker-toggle [for]="mydate" ></mat-datepicker-toggle>
+            <input matInput [matDatepicker]="mydate">
+            <mat-datepicker #mydate ></mat-datepicker>                  
+        </mat-form-field>
+         
+        <mat-form-field appearance="fill">
+            <label>Hora</label>
+            <input matInput type="time" #time>
+        </mat-form-field>
 
-<button mat-raised-button (click)="cancelSchedule()" color="warn">
-    Cancelar
-</button>
+    </form>
+    
+    <button mat-raised-button (click)="createSchedule()" color="primary">
+        Salvar
+    </button>
 
+    <button mat-raised-button (click)="cancelSchedule()" color="warn">
+        Cancelar
+    </button>
+</mat-card>
