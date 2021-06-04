@@ -7,12 +7,12 @@
     <form>
         <mat-form-field appearance="fill">
             <mat-label>Nome Completo</mat-label>
-            <input matInput >        
+            <input matInput [(ngModel)="schedule.name"] >        
         </mat-form-field>
         
         <mat-form-field appearance="fill">
         <mat-label>Selecione o médico</mat-label>
-            <mat-select>            
+            <mat-select |*ngfor="let schedule of schedule" [value]="schedule.specialist">{{schedule.specialist}}            
                 <mat-option value="one">Clínico Geral</mat-option>
                 <mat-option value="two">Oftalmologia</mat-option>
                 <mat-option value="tree">Cardiologista</mat-option>
@@ -25,13 +25,13 @@
         <mat-form-field appearance="fill">
             <label>Escolha uma data</label>            
             <mat-datepicker-toggle [for]="mydate" ></mat-datepicker-toggle>
-            <input matInput [matDatepicker]="mydate">
+            <input matInput [matDatepicker]="mydate" >
             <mat-datepicker #mydate ></mat-datepicker>                  
         </mat-form-field>
          
         <mat-form-field appearance="fill">
             <label>Hora</label>
-            <input matInput type="time" #time>
+            <input matInput type="time" #time >
         </mat-form-field>
 
     </form>
